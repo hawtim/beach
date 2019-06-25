@@ -1,0 +1,93 @@
+#sun {
+    background-color: #f90;
+    color: #fe4;
+    width: 5.533333rem;
+    margin-left: -1.733333rem;
+    margin-top: -1.733333rem;
+    height: 5.533333rem;
+    border-radius: 50%;
+    position: relative;
+    z-index: 30;
+}
+
+#sun:before {
+    content: " ";
+    width: 1.333333rem;
+    height: 0.533333rem;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 0.4rem;
+    box-shadow: 4rem 0rem 0 0.026667rem currentColor, -4rem 0 0 0.026667rem currentColor;
+}
+
+#sun:after {
+    content: " ";
+    width: 0.533333rem;
+    height: 1.333333rem;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 0.4rem;
+    box-shadow: 0rem 4rem 0 0.026667rem currentColor, 0 -4rem 0 0.026667rem currentColor;
+}
+
+.sunny {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 0.533333rem;
+    height: 1.333333rem;
+    margin: auto;
+    transform: rotate(45deg);
+    border-radius: 0.4rem;
+    box-shadow: 0rem 4rem 0 0.026667rem currentColor, 0 -4rem 0 0.026667rem currentColor;
+}
+
+.sunny:after {
+    content: " ";
+    position: absolute;
+    width: 0.533333rem;
+    height: 1.333333rem;
+    margin: auto;
+    transform: rotate(90deg);
+    border-radius: 0.4rem;
+    box-shadow: 0 4rem 0 0.026667rem currentColor, 0 -4rem 0 0.026667rem currentColor;
+}
+.sunshine {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 0.533333rem;
+    height: 1.333333rem;
+    margin: auto;
+    transform: rotate(135deg);
+    border-radius: 0.4rem;
+    box-shadow: 0rem 4rem 0 0.026667rem currentColor, 0 -4rem 0 0.026667rem currentColor;
+}
+.sunshine:after {
+    content: " ";
+    position: absolute;
+    width: 0.533333rem;
+    height: 1.333333rem;
+    margin: auto;
+    transform: rotate(180deg);
+    border-radius: 0.4rem;
+    box-shadow: 0 4rem 0 0.026667rem currentColor, 0 -4rem 0 0.026667rem currentColor;
+}
+
+@keyframes run {
+    to {transform:rotate(360deg);}
+}
+
+#sun {animation:run 30s linear infinite;}

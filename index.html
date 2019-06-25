@@ -1,0 +1,164 @@
+</html>
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+    <head>
+        <meta charset="utf-8">
+        <title>hawtim.com</title>
+        <meta name="description" content="hawtim" />
+        <meta name="viewport"
+            content="viewport-fit=cover, width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no,shrink-to-fit=no">
+        <meta content="yes" name="apple-mobile-web-app-capable">
+        <meta content="black" name="apple-mobile-web-app-status-bar-style">
+        <meta content="telephone=no" name="format-detection">
+        <meta name="msapplication-tap-highlight" content="no">
+        <link rel="stylesheet" href="./assets/css/base.css">
+        <link rel="stylesheet" href="./assets/css/sunny.css">
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+                /* transition: all .3s ease; */
+            }
+
+            .flex {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            body {
+                position: relative;
+                align-items: center;
+                min-height: 100vh;
+                background-color: rgb(118, 218, 255);
+                overflow: hidden;
+            }
+
+            body:before,
+            body:after {
+                content: "";
+                position: absolute;
+                z-index: -1;
+                left: 50%;
+                min-width: 300vw;
+                min-height: 300vw;
+                background-color: #fbffe2;
+                animation-name: rotate;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+            }
+
+            body:before {
+                bottom: 50vh;
+                border-radius: 45%;
+                animation-duration: 10s;
+            }
+
+            body:after {
+                bottom: 38vh;
+                opacity: .5;
+                border-radius: 47%;
+                animation-duration: 10s;
+            }
+
+            @keyframes rotate {
+                0% {
+                    transform: translate(-50%, 0) rotateZ(0deg);
+                }
+
+                50% {
+                    transform: translate(-50%, -2%) rotateZ(180deg);
+                }
+
+                100% {
+                    transform: translate(-50%, 0%) rotateZ(360deg);
+                }
+            }
+
+            .section-wrapper {
+                position: relative;
+                z-index: 10;
+                width: 50%;
+                margin: 0 auto;
+            }
+
+            .line {
+                position: absolute;
+                top: 50%;
+                height: 0.026667rem;
+                background-color: lightblue;
+                width: 100%;
+            }
+
+            .part {
+                text-align: center;
+            }
+
+            .part span:hover {
+                cursor: pointer;
+                font-size: 0.48rem;
+            }
+
+            .creatures {
+                position: absolute;
+                bottom: 50%;
+                width: 100%;
+                z-index: 20;
+                text-align: center;
+            }
+
+            .creatures span {
+                flex: 1;
+                display: block;
+                font-size: 24px;
+                height: auto;
+            }
+
+            .sand {
+                color: #fff;
+            }
+
+            .cloud {
+                position: relative;
+                z-index: 40;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background-color: #fff;
+                box-shadow: #fff 65px -15px 0 -5px, #fff 25px -25px, #fff 30px 10px, #fff 60px 15px 0 -10px, #fff 85px 5px 0 -5px;
+            }
+
+            .cloud1 {
+                top: 15px;
+                left: 205px;
+            }
+
+            .cloud2 {
+                top: 40px;
+                left: 60px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div class="main">
+            <!-- 实现阳光效果 -->
+            <div id="sun">
+                <div class="sunny"></div>
+                <div class="sunshine"></div>
+            </div>
+            <div class="cloud cloud1"></div>
+            <div class="cloud cloud2"></div>
+            <div class="sand"></div>
+            <section class="creatures flex justify_between">
+                <span>🦀</span>
+                <span>🦐</span>
+                <span>🐙</span>
+                <span>🐬</span>
+            </section>
+        </div>
+    </body>
+
+</html>
